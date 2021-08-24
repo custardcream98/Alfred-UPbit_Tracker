@@ -28,8 +28,8 @@ This workflow was created with reference to: [rhlsthrm/alfred-crypto-tracker](ht
 모든 과정에서 해당 가상화폐를 누르면 업비트의 해강 가상화폐 가격 페이지로 이동합니다.
 <br/><br/>
 ## 주의사항
-업비트 정책으로 인해 지나치게 자주 사용하시면 일시적으로 사용이 불가하니, 너무 자주 사용하지는 말아주세요. (시간이 지나면 다시 사용 가능해집니다.)
-<br/><br/><br/>
+업비트 정책으로 인해 지나치게 자주 사용하시면 일시적으로 사용이 불가하니, 너무 자주 사용하지는 말아주세요. (시간이 지나면 다시 사용 가능해집니다.)<br/><br/><br/>  
+
 --------------------
 ## Credits
 * [Alfred-Workflow](https://github.com/deanishe/alfred-workflow) by denishe

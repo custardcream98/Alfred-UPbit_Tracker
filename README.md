@@ -26,7 +26,7 @@ This workflow was created with reference to: [rhlsthrm/alfred-crypto-tracker](ht
 
 <br/><br/>
 ### 티커를 이용해 특정 가상화폐의 가격 불러오기
-![image](https://user-images.githubusercontent.com/87423085/130837559-b9d2debf-2ce0-42f4-937e-8639a8261531.png)
+![image](https://user-images.githubusercontent.com/87423085/130838616-eb4dd793-b407-4531-9b41-c27c0ed7b5c7.png)
 * ```upbit {Ticker}``` : 입력된 티커를 이용해 해당 가상화폐의 가격을 불러옵니다. (자동완성 기능은 없으니, 꼭 티커를 끝까지 다 써주세요)
 <br/><br/>
 ### UPbit로 이동하기

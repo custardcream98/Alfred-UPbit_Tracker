@@ -9,10 +9,13 @@ This workflow was created with reference to: [rhlsthrm/alfred-crypto-tracker](ht
 -------------------
 ## 설치 방법
 * "[UPbit Tracker.alfredworkflow](https://github.com/custardcream98/Alfred-UPbit_Tracker/raw/main/UPbit%20Tracker.alfredworkflow)"를 다운로드합니다.
-* 다운로드한 파일을 더블클릭합니다.<br/><br/><br/><br/>
+* 다운로드한 파일을 더블클릭합니다.
+* [Releases](https://github.com/custardcream98/Alfred-UPbit_Tracker/releases)에서도 다운받을 수 있습니다.<br/><br/><br/><br/>
+
 
 ## 사용법
 ### 미리 정의된 10개의 가상화폐 가격 불러오기
+![image](https://user-images.githubusercontent.com/87423085/130837496-4aa40c88-4fbf-49d1-b314-81761432c44f.png)
 * ```upbit``` + Enter : 미리 정의된 10개의 가상화폐(BTC, ETH, ADA, XRP, DOGE, DOT, BCH, LINK, LTC, XLM) 가격을 불러옵니다.
 * 정의 리스트를 바꾸고싶다면 다음의 방법을 따라해주세요.
 >1. Alfred Preferences -> Workflows -> UPbit Tracker 우클릭 -> Open in finder
@@ -23,13 +26,14 @@ This workflow was created with reference to: [rhlsthrm/alfred-crypto-tracker](ht
 
 <br/><br/>
 ### 티커를 이용해 특정 가상화폐의 가격 불러오기
+![image](https://user-images.githubusercontent.com/87423085/130837559-b9d2debf-2ce0-42f4-937e-8639a8261531.png)
 * ```upbit {Ticker}``` : 입력된 티커를 이용해 해당 가상화폐의 가격을 불러옵니다. (자동완성 기능은 없으니, 꼭 티커를 끝까지 다 써주세요)
 <br/><br/>
 ### UPbit로 이동하기
 모든 과정에서 해당 가상화폐를 누르면 업비트의 해강 가상화폐 가격 페이지로 이동합니다.
 <br/><br/><br/><br/>
 ## 주의사항
-업비트 정책으로 인해 **지나치게 자주 사용하시면 일시적으로 사용이 불가**하니, 너무 자주 사용하지는 말아주세요. (시간이 지나면 다시 사용 가능해집니다.)<br/><br/><br/>  
+업비트 정책으로 인해 *지나치게 자주 사용하시면 일시적으로 사용이 불가*하니, 너무 자주 사용하지는 말아주세요. (시간이 지나면 다시 사용 가능해집니다.)<br/><br/><br/>  
 
 --------------------
 ## Credits

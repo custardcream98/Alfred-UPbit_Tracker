@@ -23,7 +23,6 @@ This workflow was created with reference to: [rhlsthrm/alfred-crypto-tracker](ht
 >2. UPbit-tracker.py 우클릭 -> 다음으로 열기 -> 텍스트 편집기
 >3. command ⌘ + F -> 'coinlist' 입력
 >4. ```['KRW-BTC','KRW-ETH','KRW-ADA','KRW-XRP','KRW-DOGE','KRW-DOT','KRW-BCH','KRW-LINK','KRW-LTC','KRW-XLM']```의 형식을 지켜서 바꿔주시면 됩니다. (저장 잊지 마세요!)
->5. 추가로, 1번 과정에서 열었던 폴더 내의 'icon' 폴더에 가상화폐의 아이콘을 ```가상화폐 이름(소문자).png```로 넣어주시면 리스트를 불러올 때 아이콘이 제대로 뜹니다.
 
 <br/><br/>
 ### 티커를 이용해 특정 가상화폐의 가격 불러오기
@@ -32,6 +31,10 @@ This workflow was created with reference to: [rhlsthrm/alfred-crypto-tracker](ht
 <br/><br/>
 ### UPbit로 이동하기
 모든 과정에서 해당 가상화폐를 누르면 업비트의 해당 가상화폐 차트로 이동합니다.
+<br/><br/>
+### 가상화폐 아이콘 추가하기
+* Alfred Preferences -> Workflows -> UPbit Tracker 우클릭 -> Open in finder 내의 icon 폴더에 `가상화폐 이름(소문자).png`의 형식으로 아이콘을 추가해주세요.
+* 아이콘이 없는 가상화폐 검색 시에는 아이콘이 표시되지 않습니다.
 <br/><br/><br/><br/>
 ## 주의사항
 업비트 정책으로 인해 *지나치게 자주 사용하시면 일시적으로 사용이 불가*하니, 너무 자주 사용하지는 말아주세요. (시간이 지나면 다시 사용 가능해집니다.)<br/><br/><br/>  

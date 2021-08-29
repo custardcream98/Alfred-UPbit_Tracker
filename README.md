@@ -1,7 +1,7 @@
 # Alfred-UPbit_Tracker
 This Workflow is for Korean UPbit users.  
-[업비트](https://upbit.com/home)에서 가상화폐의 가격을 불러오는 워크플로우입니다. 실시간 가격이며, 아직 원화마켓만 지원합니다.  
-티커를 입력하면 해당 가상화폐의 가격, 24시간 고가/저가 등을 보여주며, Keyword만 입력하면 미리 정해진 10개의 가상화폐 가격을 보여줍니다. 원하신다면 직접 이 리스트를 변경할 수 있습니다.  
+[업비트](https://upbit.com/home)에서 가상화폐의 가격을 불러오는 풀 한국어 워크플로우입니다. 실시간 가격이며, 아직 원화마켓만 지원합니다.  
+티커를 입력하면 해당 가상화폐의 실시간 가격, 일봉 기준 고가/저가 등을 보여주며, Keyword만 입력하면 미리 정해진 10개의 가상화폐 가격을 보여줍니다. 원하신다면 직접 이 리스트를 변경할 수 있습니다. ()  
 [rhlsthrm/alfred-crypto-tracker](https://github.com/rhlsthrm/alfred-crypto-tracker)를 참고하여 만들었습니다.<br/><br/>
   
 This workflow was created with reference to: [rhlsthrm/alfred-crypto-tracker](https://github.com/rhlsthrm/alfred-crypto-tracker)<br/><br/><br/>
@@ -14,20 +14,20 @@ This workflow was created with reference to: [rhlsthrm/alfred-crypto-tracker](ht
 
 
 ## 사용법
-* Info Time은 24시간 카운트 기준시를 말합니다.
+* `가격 기준 시각`은 불러오는 일봉의 기준이 되는 시각을 발합니다.
 ### 미리 정의된 10개의 가상화폐 가격 불러오기
-![image](https://user-images.githubusercontent.com/87423085/130837496-4aa40c88-4fbf-49d1-b314-81761432c44f.png)
-* ```upbit``` + Enter : 미리 정의된 10개의 가상화폐(BTC, ETH, ADA, XRP, DOGE, DOT, BCH, LINK, LTC, XLM) 가격을 불러옵니다.
+![image](https://user-images.githubusercontent.com/87423085/131241334-9eff3a89-c103-4dee-9d77-efcdaba12ad0.png)
+* `upbit` + Enter : 미리 정의된 10개의 가상화폐(BTC, ETH, ADA, XRP, DOGE, DOT, BCH, LINK, LTC, XLM) 가격을 불러옵니다.
 * 정의 리스트를 바꾸고싶다면 다음의 방법을 따라해주세요.
 >1. Alfred Preferences -> Workflows -> UPbit Tracker 우클릭 -> Open in finder
 >2. UPbit-tracker.py 우클릭 -> 다음으로 열기 -> 텍스트 편집기
 >3. command ⌘ + F -> 'coinlist' 입력
->4. ```['KRW-BTC','KRW-ETH','KRW-ADA','KRW-XRP','KRW-DOGE','KRW-DOT','KRW-BCH','KRW-LINK','KRW-LTC','KRW-XLM']```의 형식을 지켜서 바꿔주시면 됩니다. (저장 잊지 마세요!)
+>4. `['BTC','ETH','ADA','XRP','DOGE','DOT','BCH','LINK','LTC','XLM']`의 형식을 지켜서 바꿔주시면 됩니다. (저장 잊지 마세요!)
 
 <br/><br/>
 ### 티커를 이용해 특정 가상화폐의 가격 불러오기
-![image](https://user-images.githubusercontent.com/87423085/130838616-eb4dd793-b407-4531-9b41-c27c0ed7b5c7.png)
-* ```upbit {Ticker}``` : 입력된 티커를 이용해 해당 가상화폐의 가격을 불러옵니다. (자동완성 기능은 없으니, 꼭 티커를 끝까지 다 써주세요)
+![image](https://user-images.githubusercontent.com/87423085/131241677-ced95757-1fbc-4307-9bca-210de75a2558.png)
+* `upbit {Ticker}` : 입력된 티커를 이용해 해당 가상화폐의 가격을 불러옵니다. (자동완성 기능은 없으니, 꼭 티커를 끝까지 다 써주세요)
 <br/><br/>
 ### UPbit로 이동하기
 모든 과정에서 해당 가상화폐를 누르면 업비트의 해당 가상화폐 차트로 이동합니다.

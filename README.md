@@ -40,6 +40,10 @@ This workflow was created with reference to: [rhlsthrm/alfred-crypto-tracker](ht
 업비트 정책으로 인해 *지나치게 자주 사용하시면 일시적으로 사용이 불가*하니, 너무 자주 사용하지는 말아주세요. (v0.0.4에서 해당 부분 해결한것으로 생각하나, 혹시 문제가 발생한다면 피드백 부탁드립니다.)<br/><br/><br/>  
 
 --------------------
+## 혹시 '업비트의 내 자산 평가 가치를 찾는 워크플로우'를 원하신다면
+[Alfred-UPbit_MyAssetValue](https://github.com/custardcream98/Alfred-UPbit_MyAssetValue)
+<br/><br/>
+
 ## Credits
 * [Alfred-Workflow](https://github.com/deanishe/alfred-workflow) by denishe
 * [alfred-crypto-tracker](https://github.com/rhlsthrm/alfred-crypto-tracker) by rhlsthrm

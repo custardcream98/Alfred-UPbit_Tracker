@@ -1,19 +1,22 @@
 # encoding: utf-8
-
+import time
 import sys
 from workflow import Workflow, ICON_ERROR, web
-upbit = dict()
 
-def format_strings_from_quote(ticker, data):
+def format_strings_from_quote(ticker, data, coinNameDict):
 	price = '{:,.0f}'.format(data[0]['trade_price'])
 	high = '{:,.0f}'.format(data[0]['high_price'])
 	low = '{:,.0f}'.format(data[0]['low_price'])
 	change = '{:.2f}'.format(data[0]['change_rate']*100)
-	change_price = '{:,.0f}'.format(data[0]['change_price'])
+
+	# Wiredly, UPbit API returns None for 'change_price' if it's zero.
+	# If I don't do like below, it may raise 'ValueError'
+	change_price = '0' if float(change) == 0 else '{:,.0f}'.format(data[0]['change_price'])
+
 	sign = '+' if float(change) >= 0 else ''
 	
 	formatted = {}
-	formatted['title'] = u'{} ({}): {}원 ( {}{}%, {}{}원 )'.format(upbit[ticker], ticker, price, sign, change, sign, change_price)
+	formatted['title'] = u'{} ({}): {}원 ( {}{}%, {}{}원 )'.format(coinNameDict[ticker], ticker, price, sign, change, sign, change_price)
 	formatted['subtitle'] = u'일봉 고가: {}원 | 일봉 저가: {}원'.format(high, low)
 	return formatted
 
@@ -23,6 +26,7 @@ def get_time(data):
 
 def main(wf):
 	# Get coin name traded in KRW
+	coinNameDict = dict()
 	url = "https://api.upbit.com/v1/market/all"
 	r = web.get(url)
 	
@@ -30,7 +34,7 @@ def main(wf):
 	result = r.json()
 	for upbitCoin in result:
 		if upbitCoin['market'][0:3] == 'KRW':
-			upbit[upbitCoin['market'][4:]] = upbitCoin['korean_name']
+			coinNameDict[upbitCoin['market'][4:]] = upbitCoin['korean_name']
 
 	# Get query from Alfred
 	if len(wf.args):
@@ -49,18 +53,14 @@ def main(wf):
 
 			get_time(result)
 
-			try:
-				formatted = format_strings_from_quote(ticker, result)
-				wf.add_item(title=formatted['title'],
-					subtitle=formatted['subtitle'],
-					arg='https://upbit.com/exchange?code=CRIX.UPBIT.KRW-' + ticker,
-					valid=True,
-					icon= 'icon/{}.png'.format(ticker.lower()))
 
-			except:
-				wf.add_item(title=u'입력하신 티커와 일치하는 가상화폐를 찾지 못했습니다.',
-					subtitle=u'티커는 끝까지 입력해주세요.',
-					icon=ICON_ERROR)
+			formatted = format_strings_from_quote(ticker, result, coinNameDict)
+			wf.add_item(title=formatted['title'],
+				subtitle=formatted['subtitle'],
+				arg='https://upbit.com/exchange?code=CRIX.UPBIT.KRW-' + ticker,
+				valid=True,
+				icon= 'icon/{}.png'.format(ticker.lower()))
+
 		except:
 			wf.add_item(title=u'입력하신 티커와 일치하는 가상화폐를 찾지 못했습니다.',
 				subtitle=u'티커는 끝까지 입력해주세요.',
@@ -77,13 +77,20 @@ def main(wf):
 
 		for coin in coinlist:
 			url = 'https://api.upbit.com/v1/candles/days?market={}'.format('KRW-' + coin)
-			r = web.get(url)
+			while True:
+				r = web.get(url)
+				if r.status_code == 429:
+					time.sleep(0.05) # a little delay to avoid HTTPError 429 'too many requests'
+					continue
+				elif r.status_code == 200:
+					break
+				else:
+					r.raise_for_status()
 
-			r.raise_for_status()
 			result = r.json()
 
 			ticker = result[0]['market'][4:]
-			formatted = format_strings_from_quote(ticker, result)
+			formatted = format_strings_from_quote(ticker, result, coinNameDict)
 			wf.add_item(title=formatted['title'],
 				subtitle=formatted['subtitle'],
 				arg='https://upbit.com/exchange?code=CRIX.UPBIT.KRW-' + ticker,

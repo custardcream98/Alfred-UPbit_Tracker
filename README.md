@@ -1,7 +1,7 @@
 # Alfred-UPbit_Tracker
 This Workflow is for Korean UPbit users.  
 [업비트](https://upbit.com/home)에서 가상화폐의 가격을 불러오는 풀 한국어 워크플로우입니다. 실시간 가격이며, 아직 원화마켓만 지원합니다.  
-티커를 입력하면 해당 가상화폐의 실시간 가격, 일봉 기준 고가/저가 등을 보여주며, Keyword만 입력하면 미리 정해진 10개의 가상화폐 가격을 보여줍니다. 원하신다면 직접 이 리스트를 변경할 수 있습니다. ()  
+티커를 입력하면 해당 가상화폐의 실시간 가격, 일봉 기준 고가/저가 등을 보여주며, Keyword만 입력하면 미리 정해진 10개의 가상화폐 가격을 보여줍니다. [원하신다면 직접 이 리스트를 변경할 수 있습니다.](https://github.com/custardcream98/Alfred-UPbit_Tracker#%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90-%EC%95%84%EC%9D%B4%EC%BD%98-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0)  
 [rhlsthrm/alfred-crypto-tracker](https://github.com/rhlsthrm/alfred-crypto-tracker)를 참고하여 만들었습니다.<br/><br/>
   
 This workflow was created with reference to: [rhlsthrm/alfred-crypto-tracker](https://github.com/rhlsthrm/alfred-crypto-tracker)<br/><br/><br/>
@@ -37,7 +37,7 @@ This workflow was created with reference to: [rhlsthrm/alfred-crypto-tracker](ht
 * 아이콘이 없는 가상화폐 검색 시에는 아이콘이 표시되지 않습니다.
 <br/><br/><br/><br/>
 ## 주의사항
-업비트 정책으로 인해 *지나치게 자주 사용하시면 일시적으로 사용이 불가*하니, 너무 자주 사용하지는 말아주세요. (시간이 지나면 다시 사용 가능해집니다.)<br/><br/><br/>  
+업비트 정책으로 인해 *지나치게 자주 사용하시면 일시적으로 사용이 불가*하니, 너무 자주 사용하지는 말아주세요. (v0.0.4에서 해당 부분 해결한것으로 생각하나, 혹시 문제가 발생한다면 피드백 부탁드립니다.)<br/><br/><br/>  
 
 --------------------
 ## Credits
